@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 
-
 ARCHIVE_BUILD_FOLDER="/tmp/portainer-builds"
 
 # parameter: "platform-architecture"
 function build_and_push_images() {
-  docker build -t "networkinss/inssportainer:$1-${VERSION}" -f build/linux/Dockerfile .
-  #docker tag  "networkinss/inssportainer:$1-${VERSION}" "networkinss/portainer:$1"
-  #docker push "portainer/portainer:$1-${VERSION}"
-  #docker push "portainer/portainer:$1"
+  docker build -t "portainer/portainer:$1-${VERSION}" -f build/linux/Dockerfile .
+  docker tag  "portainer/portainer:$1-${VERSION}" "portainer/portainer:$1"
+  docker push "portainer/portainer:$1-${VERSION}"
+  docker push "portainer/portainer:$1"
 }
 
 # parameter: "platform-architecture"
@@ -31,7 +30,7 @@ function build_all() {
     if [ `echo $tag | cut -d \- -f 1` == 'linux' ]; then build_and_push_images "$tag"; fi
     build_archive "$tag"
   done
-  #docker rmi $(docker images -q -f dangling=true)
+  docker rmi $(docker images -q -f dangling=true)
 }
 
 if [[ $# -ne 1 ]] ; then
@@ -43,8 +42,7 @@ else
   if [ `echo "$@" | cut -c1-4` == 'echo' ]; then
     bash -c "$@";
   else
-    #build_all 'linux-amd64 linux-arm linux-arm64 linux-ppc64le linux-s390x darwin-amd64 windows-amd64'
-    build_all 'linux-amd64'
+    build_all 'linux-amd64 linux-arm linux-arm64 linux-ppc64le linux-s390x darwin-amd64 windows-amd64'
     exit 0
   fi
 fi
