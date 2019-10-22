@@ -10,7 +10,7 @@
   <div class="sidebar-content">
   <ul class="sidebar">
     <li class="sidebar-list">
-      <a ui-sref="portainer.home" ui-sref-active="active">Home <span class="menu-icon fa fa-home fa-fw"></span></a>
+      <a ui-sref="portainer.home" ui-sref-active="active">Dashboard <span class="menu-icon fa fa-home fa-fw"></span></a>
     </li>
     <li class="sidebar-title endpoint-name" ng-if="applicationState.endpoint.name">
       <span class="fa fa-plug space-right"></span>{{ applicationState.endpoint.name }}
@@ -50,6 +50,12 @@
     </li>
     <li class="sidebar-list" ng-if="!applicationState.application.authentication || isAdmin">
       <a ui-sref="portainer.extensions" ui-sref-active="active">Extensions <span class="menu-icon fa fa-bolt fa-fw"></span></a>
+    </li>
+    <li class="sidebar-list" ng-if="!applicationState.application.authentication || isAdmin">
+      <a ui-sref="portainer.extensions" ui-sref-active="active">Stack <span class="menu-icon fa fa-bolt fa-fw"></span></a>
+    </li>
+    <li class="sidebar-list" ng-if="!applicationState.application.authentication || isAdmin">
+      <a ui-sref="portainer.extensions" ui-sref-active="active">Container <span class="menu-icon fa fa-bolt fa-fw"></span></a>
     </li>
     <li class="sidebar-list" ng-if="!applicationState.application.authentication || isAdmin">
       <a ui-sref="portainer.extensions" ui-sref-active="active">Rezepte <span class="menu-icon fa fa-bolt fa-fw"></span></a>

@@ -1,5 +1,5 @@
 <rd-header>
-  <rd-header-title title-text="Home">
+  <rd-header-title title-text="Dashboard">
     <a data-toggle="tooltip" title="Refresh" ui-sref="portainer.home" ui-sref-opts="{reload: true}">
       <i class="fa fa-sync" aria-hidden="true"></i>
     </a>
@@ -24,9 +24,32 @@
   </span>
 </information-panel>
 
+
+
 <div class="row" style="width:100%; height:100%; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;" ng-if="state.connectingToEdgeEndpoint">
   Connecting to the Edge endpoint...
   <i class="fa fa-cog fa-spin" style="margin-left: 5px"></i>
+</div>
+
+<div>
+<table>
+  <tr><td>
+    <img src="../../../../assets/images/docker.png">0 Stacks</td>
+    <td style="width:180px"> </td>
+    <td><img src="../../../../assets/images/docker.png">0 Container</td>
+    </tr>
+    <tr>
+    <td><img src="../../../../assets/images/docker.png">0 Rezepte</td>
+    <td> </td>
+    <td><img src="../../../../assets/images/docker.png">0 Konzepte</td></tr>
+  <tr><td><img src="../../../../assets/images/docker.png">0 Layer</td>
+<td></td>
+  <td><img src="../../../../assets/images/docker.png">0 Images</td>
+  </tr><tr>
+  <td><img src="../../../../assets/images/docker.png">0 Kubernetes</td>
+  <td></td>
+  <td><img src="../../../../assets/images/docker.png">0 Werkzeuge</td></tr>
+  </table>
 </div>
 
 <div class="row" ng-if="!state.connectingToEdgeEndpoint">
