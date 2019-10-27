@@ -222,6 +222,89 @@ angular.module('portainer.app', [])
     }
   };
 
+  var stack2 = {
+    name: 'portainer.stack2',
+    url: '/stack',
+    views: {
+      'content@': {
+        templateUrl: './views/stack/stack.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+
+  var container = {
+    name: 'portainer.container',
+    url: '/container',
+    views: {
+      'content@': {
+        templateUrl: './views/container/container.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+
+  var rezepte = {
+    name: 'portainer.rezepte',
+    url: '/rezepte',
+    views: {
+      'content@': {
+        templateUrl: './views/rezepte/rezepte.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+  var konzepte = {
+    name: 'portainer.konzepte',
+    url: '/konzepte',
+    views: {
+      'content@': {
+        templateUrl: './views/konzepte/konzepte.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+  var layer = {
+    name: 'portainer.layer',
+    url: '/layer',
+    views: {
+      'content@': {
+        templateUrl: './views/layer/layer.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+  var images = {
+    name: 'portainer.images',
+    url: '/images',
+    views: {
+      'content@': {
+        templateUrl: './views/images/images.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+  var kubernetes = {
+    name: 'portainer.kubernetes',
+    url: '/kubernetes',
+    views: {
+      'content@': {
+        templateUrl: './views/kubernetes/kubernetes.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+  var werkzeuge = {
+    name: 'portainer.werkzeuge',
+    url: '/werkzeuge',
+    views: {
+      'content@': {
+        templateUrl: './views/werkzeuge/werkzeuge.html',
+        controller: 'ExtensionsController'
+      }
+    }
+  };
+
   var registries = {
     name: 'portainer.registries',
     url: '/registries',
@@ -529,6 +612,16 @@ angular.module('portainer.app', [])
   $stateRegistryProvider.register(settingsAuthentication);
   $stateRegistryProvider.register(stacks);
   $stateRegistryProvider.register(stack);
+
+  $stateRegistryProvider.register(container);
+  $stateRegistryProvider.register(rezepte);
+  $stateRegistryProvider.register(konzepte);
+  $stateRegistryProvider.register(layer);
+  $stateRegistryProvider.register(kubernetes);
+  $stateRegistryProvider.register(werkzeuge);
+  $stateRegistryProvider.register(images);
+  $stateRegistryProvider.register(stack2);
+
   $stateRegistryProvider.register(stackCreation);
   $stateRegistryProvider.register(support);
   $stateRegistryProvider.register(supportProduct);
