@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ARCHIVE_BUILD_FOLDER="/tmp/portainer-builds"
 
 # parameter: "platform-architecture"

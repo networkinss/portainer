@@ -224,7 +224,7 @@ angular.module('portainer.app', [])
 
   var stack2 = {
     name: 'portainer.stack2',
-    url: '/stack',
+    url: '/stack2',
     views: {
       'content@': {
         templateUrl: './views/stack/stack.html',
