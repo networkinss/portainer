@@ -227,7 +227,7 @@ angular.module('portainer.app', [])
     url: '/stack2',
     views: {
       'content@': {
-        templateUrl: './views/stack/stack.html',
+        templateUrl: './views/stack2/stack2.html',
         controller: 'ExtensionsController'
       }
     }
@@ -417,7 +417,7 @@ angular.module('portainer.app', [])
       endpointID: ['EndpointProvider', '$state',
         function (EndpointProvider, $state) {
           var id = EndpointProvider.endpointID();
-          if (!id) {
+          if (!id ) {
             return $state.go('portainer.home');
           }
         }

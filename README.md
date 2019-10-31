@@ -15,9 +15,8 @@
 
 ## Demo
 
-You can try out the public demo instance: http://demo.portainer.io/ (login with the username **admin** and the password **tryportainer**).
+You can try out the public demo instance: http://ec2-35-158-125-232.eu-central-1.compute.amazonaws.com:9000 (login with the username **admin** and the password **adminadmin**).
 
-Please note that the public demo cluster is **reset every 15min**.
 
 Alternatively, you can deploy a copy of the demo stack inside a [play-with-docker (PWD)](https://labs.play-with-docker.com) playground:
 
