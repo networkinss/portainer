@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 angular.module('portainer.app')
-  .controller('StackController', ['$scope', '$state', 'ExtensionService', 'Notifications',
+  .controller('KonzepteController', ['$scope', '$state', 'ExtensionService', 'Notifications',
     function($scope, $state, ExtensionService, Notifications) {
 
       $scope.state = {

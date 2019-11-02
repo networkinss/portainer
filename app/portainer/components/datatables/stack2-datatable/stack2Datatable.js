@@ -1,6 +1,6 @@
-angular.module('portainer.app').component('konzepteDatatable', {
-  templateUrl: './konzepteDatatable.html',
-  controller: 'KonzepteDatatableController',
+angular.module('portainer.app').component('stack2Datatable', {
+  templateUrl: './stack2Datatable.html',
+  controller: 'Stack2DatatableController',
   bindings: {
     titleText: '@',
     titleIcon: '@',
