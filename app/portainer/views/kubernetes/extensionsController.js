@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 angular.module('portainer.app')
-  .controller('KubernetesController', ['$scope', '$state', 'ExtensionService', 'Notifications',
+  .controller('ExtensionsController', ['$scope', '$state', 'ExtensionService', 'Notifications',
     function($scope, $state, ExtensionService, Notifications) {
 
       $scope.state = {
